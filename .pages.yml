@@ -1,0 +1,40 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: posts
+    label: Články
+    type: collection
+    path: src/content/posts
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Název článku
+        type: string
+        required: true
+      - name: date
+        label: Datum
+        type: date
+        required: true
+      - name: category
+        label: Rubrika
+        type: select
+        required: true
+        options:
+          values: [Novinky, Tipy do výuky]
+      - name: description
+        label: Krátký popis
+        type: text
+        required: true
+      - name: body
+        label: Obsah článku
+        type: rich-text

@@ -1,16 +1,8 @@
 ---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { formatDate } from '../data/posts.js';
+const posts = await getCollection('posts');
+const shown = [...posts].sort((a,b)=>String(b.data.date).localeCompare(String(a.data.date)));
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base><div class="wrap"><section class="hero"><h1>Blog Živé tabule</h1><p class="lead">Novinky, tipy do výuky a příběhy ze zákulisí Živé tabule.</p></section><nav class="filters" aria-label="Rubriky"><button class="filter active" data-filter="all" aria-pressed="true">Všechny</button><button class="filter" data-filter="Novinky" aria-pressed="false">Novinky</button><button class="filter" data-filter="Tipy do výuky" aria-pressed="false">Tipy do výuky</button></nav><section aria-label="Články">{shown.map(post=><article class="post" data-category={post.data.category}><div class="meta">{post.data.category} · {formatDate(post.data.date)}</div><h2><a href={'/clanky/'+post.id+'/'}>{post.data.title}</a></h2><p class="summary">{post.data.description}</p></article>)}</section></div><script>document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const value=button.getAttribute('data-filter');document.querySelectorAll('[data-filter]').forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});document.querySelectorAll('[data-category]').forEach(a=>{a.hidden=value!=='all'&&a.getAttribute('data-category')!==value;});}));</script></Base>
