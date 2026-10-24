@@ -1,16 +1,8 @@
 ---
+import Base from '../layouts/Base.astro';
+import {posts,formatDate} from '../data/posts.js';
+const category=Astro.url.searchParams.get('rubrika');
+const categories=['Všechny','Novinky','Tipy do výuky'];
+const shown=posts.filter(p=>!category||category==='Všechny'||p.category===category).sort((a,b)=>b.date.localeCompare(a.date));
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base><div class="wrap"><section class="hero"><h1>Blog Živé tabule</h1><p class="lead">Novinky, tipy do výuky a příběhy ze zákulisí Živé tabule.</p></section><nav class="filters" aria-label="Rubriky">{categories.map(c=><a class:list={['filter',{active:(category||'Všechny')===c}]} href={c==='Všechny'?'/':'/?rubrika='+encodeURIComponent(c)}>{c}</a>)}</nav><section aria-label="Články">{shown.map(post=><article class="post"><div class="meta">{post.category} · {formatDate(post.date)}</div><h2><a href={'/clanky/'+post.slug+'/'}>{post.title}</a></h2><p class="summary">{post.description}</p></article>)}</section></div></Base>
