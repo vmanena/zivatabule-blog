@@ -1,6 +1,6 @@
 ---
 title: "Jak provozujeme blog Živé tabule téměř zadarmo"
-date: 2026-10-26
+date: 2026-10-24
 category: "Novinky"
 description: "Astro, GitHub, Cloudflare Pages a Pages CMS. Jaké nástroje používáme pro náš blog a proč nám pomáhají šetřit náklady?"
 ---
