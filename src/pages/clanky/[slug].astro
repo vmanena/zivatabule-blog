@@ -2,9 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDate } from '../../data/posts.js';
+import { isPublished } from '../../data/publication.js';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
-  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+  return posts.filter(isPublished).map(post => ({ params: { slug: post.id }, props: { post } }));
 }
 const { post } = Astro.props;
 const { Content } = await render(post);
