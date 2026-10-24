@@ -9,7 +9,7 @@ description: Astro, GitHub, Cloudflare Pages a Pages CMS. Jaké nástroje
 
 Mohli jsme si pořídit placený redakční systém, webhosting a další služby. Místo toho jsme se rozhodli využít nástroje, které jsou zdarma a pro naše potřeby úplně dostačují.
 
-## Na čem náš blog běží?
+## Na čem blog běží?
 
 **[Astro](https://astro.build/)** je nástroj pro tvorbu rychlých webových stránek. Díky němu můžeme blog provozovat jako statický web, který nepotřebuje vlastní databázi ani neustále běžící serverovou aplikaci.
 
