@@ -2,4 +2,38 @@
 import '../styles/global.css';
 const {title='Blog Živé tabule',description='Novinky, tipy do výuky a příběhy ze zákulisí Živé tabule.'}=Astro.props;
 ---
-<!doctype html><html lang="cs"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><title>{title}</title></head><body><header class="site-header"><nav class="wrap nav"><a class="brand" href="/">Živá tabule</a><a class="external" href="https://zivatabule.cz/">Otevřít tabuli ↗</a></nav></header><main><slot/></main><footer class="site-footer"><div class="wrap footer-inner"><span>© {new Date().getFullYear()} Živá tabule</span><a href="https://zivatabule.cz/">zivatabule.cz ↗</a></div></footer></body></html>
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content={description}/>
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="wrap nav" aria-label="Hlavní navigace">
+        <div class="brand-group">
+          <a class="brand-logo" href="https://zivatabule.cz/" aria-label="Živá tabule – hlavní web">
+            <img src="/images/ziva_tabule_logo.png" alt="Logo Živé tabule" width="42" height="42"/>
+          </a>
+          <a class="brand" href="/">Blog Živé tabule</a>
+        </div>
+        <a class="external" href="https://zivatabule.cz/">Otevřít tabuli ↗</a>
+      </nav>
+    </header>
+    <main><slot/></main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="support">
+          <p>Živá tabule je zdarma, bez registrace a bez reklam. Pomozte nám ji udržet v provozu.</p>
+          <a class="support-link" href="https://zivatabule.cz/podpora">Podpořit Živou tabuli <span aria-hidden="true">♥</span></a>
+        </div>
+        <div class="footer-inner">
+          <span>© {new Date().getFullYear()} Živá tabule</span>
+          <a href="https://zivatabule.cz/">zivatabule.cz ↗</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
