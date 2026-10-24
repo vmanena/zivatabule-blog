@@ -7,3 +7,6 @@
 .support-link{color:#176b95;font-weight:650;text-decoration:underline;text-underline-offset:3px}
 .support-link:hover{color:#125f80}
 @media(max-width:520px){.brand{font-size:1rem}.brand-logo img{width:36px;height:36px}.brand-group{gap:8px}}
+
+.brand-home{text-decoration:none}
+.brand-home:hover .brand{color:#1678a8}
