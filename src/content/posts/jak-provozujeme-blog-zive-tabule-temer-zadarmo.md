@@ -15,7 +15,7 @@ Mohli jsme si pořídit placený redakční systém, webhosting a další služb
 
 **[GitHub](https://github.com/)** slouží k ukládání článků a zdrojového kódu. Navíc uchovává historii změn, takže se můžeme kdykoliv vrátit ke starší verzi.
 
-**[Cloudflare Pages](https://pages.cloudflare.com/)** zajišťuje sestavení a zveřejnění blogu. Když přidáme článek nebo něco upravíme, web se automaticky aktualizuje. Navedl nás na něj [Jindra Zdráhal](https://www.sskola.cz/), kterému moc děkujeme!
+**[Cloudflare Pages](https://pages.cloudflare.com/)** zajišťuje sestavení a zveřejnění blogu z GitHubu. Když přidáme článek nebo něco upravíme, web se automaticky aktualizuje. Na Cloudflare Pages nás navedl [Jindra Zdráhal](https://www.sskola.cz/), kterému moc děkujeme!
 
 **[Pages CMS](https://pagescms.org/)** je jednoduché redakční rozhraní, díky kterému můžeme psát a upravovat články bez práce se zdrojovým kódem. Je zdarma a jeho zdrojový kód je otevřený.
 
