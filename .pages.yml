@@ -35,6 +35,9 @@ content:
         label: Krátký popis
         type: text
         required: true
+      - name: image
+        label: Úvodní obrázek (nepovinný)
+        type: image
       - name: body
         label: Obsah článku
         type: rich-text
