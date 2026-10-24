@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import {posts,formatDate} from '../../data/posts.js';
+export function getStaticPaths(){return posts.map(post=>({params:{slug:post.slug},props:{post}}));}
+const {post}=Astro.props;
+---
+<Base title={post.title+' | Blog Živé tabule'} description={post.description}><div class="wrap article"><div class="meta">{post.category} · {formatDate(post.date)}</div><h1 style="margin-top:16px">{post.title}</h1><p class="lead">{post.description}</p><div style="margin-top:42px">{post.body.map(p=><p>{p}</p>)}</div><a class="back" href="/">← Všechny články</a></div></Base>
