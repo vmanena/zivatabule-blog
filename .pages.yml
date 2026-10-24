@@ -30,7 +30,7 @@ content:
         type: select
         required: true
         options:
-          values: [Novinky, Tipy do výuky]
+          values: [Novinky, Tipy do výuky, Ze zákulisí]
       - name: description
         label: Krátký popis
         type: text
