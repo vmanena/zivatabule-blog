@@ -1,7 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
-import {posts,formatDate} from '../../data/posts.js';
-export function getStaticPaths(){return posts.map(post=>({params:{slug:post.slug},props:{post}}));}
-const {post}=Astro.props;
+import { getCollection, render } from 'astro:content';
+import { formatDate } from '../../data/posts.js';
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
 ---
-<Base title={post.title+' | Blog Živé tabule'} description={post.description}><div class="wrap article"><div class="meta">{post.category} · {formatDate(post.date)}</div><h1 style="margin-top:16px">{post.title}</h1><p class="lead">{post.description}</p><div style="margin-top:42px">{post.body.map(p=><p>{p}</p>)}</div><a class="back" href="/">← Všechny články</a></div></Base>
+<Base title={post.data.title+' | Blog Živé tabule'} description={post.data.description}><div class="wrap article"><div class="meta">{post.data.category} · {formatDate(post.data.date)}</div><h1 style="margin-top:16px">{post.data.title}</h1><p class="lead">{post.data.description}</p><div style="margin-top:42px"><Content /></div><a class="back" href="/">← Všechny články</a></div></Base>
