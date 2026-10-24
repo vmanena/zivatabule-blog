@@ -1,6 +1,7 @@
-export const posts = [
-  {slug:'vitejte-na-blogu',title:'Vítejte na blogu Živé tabule',date:'2026-10-24',category:'Novinky',description:'Novinky, tipy do výuky a pohled do zákulisí našeho projektu.',body:['Živá tabule vzniká jako jednoduchý pomocník pro učitele. Bez registrace, bez reklam a bez sledování.','Na blogu budeme sdílet novinky z vývoje, praktické nápady do hodin i zkušenosti učitelů.']},
-  {slug:'losovani-ve-vyuce',title:'Jak využít losování ve výuce',date:'2026-10-24',category:'Tipy do výuky',description:'Jednoduché nápady, jak zapojit žáky pomocí náhodného losování.',body:['Losování může pomoci při výběru dobrovolníků, rozdělování úkolů nebo rychlém střídání aktivit.','Předem se žáky domluvte pravidla, aby losování bylo předvídatelné a bezpečné.']},
-  {slug:'proc-je-ziva-tabule-zdarma',title:'Proč je Živá tabule zdarma',date:'2026-10-24',category:'Novinky',description:'Chceme, aby jednoduché nástroje mohl používat každý učitel.',body:['Živá tabule je zdarma a bez reklam. Chceme, aby byla rychlá, přístupná a nevyžadovala účet.','Kdo chce, může projekt dobrovolně podpořit. Používání však zůstává zdarma.']}
-];
-export const formatDate = (date) => new Intl.DateTimeFormat('cs-CZ',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'));
+// Pomocná funkce pro české zobrazení data v článcích.
+export const formatDate = (value) => {
+  const date = value instanceof Date ? value : new Date(String(value).slice(0, 10) + 'T12:00:00Z');
+  return new Intl.DateTimeFormat('cs-CZ', {
+    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'
+  }).format(date);
+};
