@@ -12,3 +12,5 @@
 .brand-home:hover .brand{color:#1678a8}
 
 /* Rebuild to publish scheduled articles dated 2026-10-25. */
+
+.article-body a{color:#176b95;text-underline-offset:3px}.article-body a:hover{color:#125f80}
