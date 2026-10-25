@@ -1,10 +1,10 @@
 ---
-title: "Proč vznikla Živá tabule?"
+title: Proč vznikla Živá tabule?
 date: 2026-10-24
-category: "Novinky"
-description: "Jednoduchá pomůcka pro učitele, která se otevře v prohlížeči a hned funguje. Proč jsme se pustili do vývoje Živé tabule?"
+category: Ze zákulisí
+description: Jednoduchá pomůcka pro učitele, která se otevře v prohlížeči a hned
+  funguje. Proč jsme se pustili do vývoje Živé tabule?
 ---
-
 Ve výuce člověk často potřebuje úplně obyčejné věci. Spustit odpočet, náhodně někoho vylosovat, rozdělit třídu do skupin nebo rychle sdílet odkaz. Ideálně hned, bez hledání správné aplikace a bez zbytečného nastavování.
 
 Právě z takových situací vznikl nápad na **[Živou tabuli](https://zivatabule.cz/)**. Chtěli jsme mít praktické pomůcky pohromadě, na jednom místě, a používat je přímo na tabuli ve třídě.
