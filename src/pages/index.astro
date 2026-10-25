@@ -6,4 +6,33 @@ import { isPublished } from '../data/publication.js';
 const posts = await getCollection('posts');
 const shown = posts.filter(post => isPublished(post)).sort((a,b)=>String(b.data.date).localeCompare(String(a.data.date)));
 ---
-<Base><div class="wrap"><section class="hero"><h1>Blog Živé tabule</h1><p class="lead">Novinky, tipy do výuky a příběhy ze zákulisí Živé tabule.</p></section><nav class="filters" aria-label="Rubriky"><button class="filter active" data-filter="all" aria-pressed="true">Všechny články</button><button class="filter" data-filter="Novinky" aria-pressed="false">Novinky</button><button class="filter" data-filter="Tipy do výuky" aria-pressed="false">Tipy do výuky</button><button class="filter" data-filter="Ze zákulisí" aria-pressed="false">Ze zákulisí</button></nav><section aria-label="Články">{shown.map(post=><article class="post" data-category={post.data.category}>{post.data.image && <a href={'/clanky/'+post.id+'/'} aria-label={'Otevřít článek '+post.data.title}><img class="post-image" src={post.data.image} alt="" loading="lazy" /></a>}<div class="meta">{post.data.category} · {formatDate(post.data.date)}</div><h2><a href={'/clanky/'+post.id+'/'}>{post.data.title}</a></h2><p class="summary">{post.data.description}</p></article>)}</section></div><script>document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const value=button.getAttribute('data-filter');document.querySelectorAll('[data-filter]').forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});document.querySelectorAll('[data-category]').forEach(a=>{a.hidden=value!=='all'&&a.getAttribute('data-category')!==value;});}));</script></Base>
+<Base><div class="wrap"><section class="hero"><h1>Blog Živé tabule</h1><p class="lead">Novinky, tipy do výuky a příběhy ze zákulisí Živé tabule.</p></section><nav class="filters" aria-label="Rubriky"><button class="filter active" data-filter="all" aria-pressed="true">Všechny články</button><button class="filter" data-filter="Novinky" aria-pressed="false">Novinky</button><button class="filter" data-filter="Tipy do výuky" aria-pressed="false">Tipy do výuky</button><button class="filter" data-filter="Ze zákulisí" aria-pressed="false">Ze zákulisí</button></nav><section aria-label="Články">{shown.map(post=><article class="post" data-category={post.data.category}>{post.data.image && <a href={'/clanky/'+post.id+'/'} aria-label={'Otevřít článek '+post.data.title}><img class="post-image" src={post.data.image} alt="" loading="lazy" /></a>}<div class="meta">{post.data.category} · {formatDate(post.data.date)}</div><h2><a href={'/clanky/'+post.id+'/'}>{post.data.title}</a></h2><p class="summary">{post.data.description}</p></article>)}</section><nav class="pagination" data-pagination aria-label="Stránkování článků" hidden><button class="filter" data-newer>← Novější</button><span data-page-status aria-live="polite" aria-atomic="true"></span><button class="filter" data-older>Starší →</button></nav></div><script>const pageSize = 10;
+const articles = Array.from(document.querySelectorAll<HTMLElement>('[data-category]'));
+const filters = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-filter]'));
+const pager = document.querySelector<HTMLElement>('[data-pagination]')!;
+const newer = document.querySelector<HTMLButtonElement>('[data-newer]')!;
+const older = document.querySelector<HTMLButtonElement>('[data-older]')!;
+const status = document.querySelector<HTMLElement>('[data-page-status]')!;
+let category = 'all';
+let page = 1;
+function render(scroll = false) {
+  const matching = articles.filter(a => category === 'all' || a.dataset.category === category);
+  const total = Math.max(1, Math.ceil(matching.length / pageSize));
+  page = Math.max(1, Math.min(page, total));
+  articles.forEach(a => { a.hidden = true; });
+  matching.slice((page - 1) * pageSize, page * pageSize).forEach(a => { a.hidden = false; });
+  pager.hidden = total <= 1;
+  newer.disabled = page === 1;
+  older.disabled = page === total;
+  status.textContent = 'Stránka ' + page + ' z ' + total;
+  if (scroll) document.querySelector('[aria-label="Rubriky"]')?.scrollIntoView({block: 'start'});
+}
+filters.forEach(button => button.addEventListener('click', () => {
+  category = button.dataset.filter || 'all';
+  page = 1;
+  filters.forEach(b => { const active = b === button; b.classList.toggle('active', active); b.setAttribute('aria-pressed', String(active)); });
+  render();
+}));
+newer.addEventListener('click', () => { page--; render(true); });
+older.addEventListener('click', () => { page++; render(true); });
+render();</script><style>.pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:28px 0}.pagination[hidden]{display:none}.pagination button{font:inherit;background:white;cursor:pointer}.pagination button:disabled{opacity:.45;cursor:default}.pagination span{font-size:.9rem;color:#657480}</style></Base>
