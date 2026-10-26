@@ -14,3 +14,9 @@
 /* Rebuild to publish scheduled articles dated 2026-10-25. */
 
 .article-body a{color:#176b95;text-underline-offset:3px}.article-body a:hover{color:#125f80}
+
+/* Highlight quotations consistently within articles. */
+.article-body blockquote{margin:1.5em 0;padding:16px 20px;border-left:4px solid #278653;border-radius:0 8px 8px 0;background:#f0f7f2;color:inherit;font-size:inherit;font-style:normal;overflow-wrap:anywhere}
+.article-body blockquote > :first-child{margin-top:0}
+.article-body blockquote > :last-child{margin-bottom:0}
+@media(max-width:520px){.article-body blockquote{padding:12px 14px}}
