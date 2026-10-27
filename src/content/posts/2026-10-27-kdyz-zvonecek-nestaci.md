@@ -2,17 +2,19 @@
 title: "Když zvoneček nestačí"
 date: 2026-10-27
 category: "Tipy do výuky"
-description: "Jemný zvoneček, nebo výraznější bzučák? Vyberte si zvuk podle třídy a situace."
+description: "Jemný zvoneček, nebo výraznější bzučák? V měřiči hlasitosti si můžete vybrat zvuk podle své třídy."
 ---
 
 Ne vždycky máte před sebou třídu plnou zakřiknutých prvňáčků. Někdy potřebujete zvuk, který zaznamená i devátá třída v květnu.
 
-V nástroji **Bzučák** si můžete zvolit zvuk, který zazní při přihlášení žáka. Pro klidnější prostředí se může hodit jemný zvoneček, v živější třídě zase výraznější bzučák.
+[Měřič hlasitosti](https://zivatabule.cz/) v Živé tabuli vám pomůže upozornit žáky, když hluk ve třídě překročí nastavenou hranici. A protože každá třída i každá činnost jsou jiné, můžete si zvolit také zvuk upozornění.
 
-## Vyberte zvuk před hodinou
+V klidnější třídě může stačit jemný zvoneček. Při živější skupinové práci můžete vyzkoušet výraznější **bzučák**.
 
-Než se pustíte do soutěže, zkuste si zvuk přehrát a upravit hlasitost tak, aby byl ve třídě dobře slyšet a zároveň nebyl nepříjemně hlasitý. Záleží nejen na třídě, ale i na reproduktorech a prostředí.
+## Vyzkoušejte zvuk před hodinou
 
-Pak už stačí položit otázku a nechat žáky, aby se přihlásili. Ať už vás doprovodí zvoneček, nebo bzučák, důležité je, aby všichni věděli, že někdo zná odpověď.
+Před začátkem hodiny si zvolený zvuk vyzkoušejte a nastavte hlasitost reproduktorů tak, aby upozornění žáci slyšeli, ale nebylo jim nepříjemné. Záleží na velikosti místnosti, reproduktorech i na tom, co se ve třídě zrovna děje.
 
-Více o tom, jak soutěž funguje, najdete v článku [Bzučák: Rychlá vědomostní soutěž pro celou třídu](/clanky/2026-10-26-bzucak-rychla-vedomostni-soutez-pro-celou-tridu/).
+Se žáky se také můžete předem domluvit, co signál znamená: například že je čas na chvíli ztišit hlasy, aby se zase všichni slyšeli. Měřič pak může být jednoduchou pomůckou při skupinové práci i dalších činnostech, při kterých je ve třídě trochu živěji.
+
+Někdy stačí zvoneček. A někdy je prostě květen v deváté třídě.
