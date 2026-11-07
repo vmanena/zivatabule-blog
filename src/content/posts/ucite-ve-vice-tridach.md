@@ -1,7 +1,8 @@
 ---
 title: "Učíte ve více třídách? Se Živou tabulí žádný problém!"
 description: "Připravte si Živou tabuli pro každou třídu zvlášť, uložte ji pod vlastním názvem a kdykoliv znovu načtěte."
-pubDate: 2026-11-07
+date: 2026-11-07
+category: "Tipy do výuky"
 ---
 
 Učíte v několika třídách a pro každou potřebujete něco trochu jiného? V jedné máte připravená jména žáků pro losování, ve druhé jiné skupiny nebo vlastní poznámky. **Nemusíte všechno nastavovat znovu.**
