@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
-const {title='Blog Živé tabule',description='Novinky, tipy do výuky a příběhy ze zákulisí Živé tabule.'}=Astro.props;
+const {title='Blog Živé tabule',description='Novinky, tipy do výuky a příběhy ze zákulisí Živé tabule.',socialImage}=Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
+const absoluteImage = socialImage ? new URL(socialImage, Astro.site ?? Astro.url.origin).href : undefined;
 ---
 <!doctype html>
 <html lang="cs">
@@ -8,6 +10,14 @@ const {title='Blog Živé tabule',description='Novinky, tipy do výuky a příb�
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content={description}/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:url" content={canonical}/>
+    {absoluteImage && <meta property="og:image" content={absoluteImage}/>}
+    <meta name="twitter:card" content={absoluteImage ? "summary_large_image" : "summary"}/>
+    {absoluteImage && <meta name="twitter:image" content={absoluteImage}/>}
+
     <link rel="icon" type="image/png" href="/images/ziva_tabule_logo.png"/>
     <title>{title}</title>
   </head>
