@@ -20,3 +20,14 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## Publishing articles (mandatory)
+
+- Articles live in `src/content/posts/*.md`. Before writing a new article, read a recently published file and `src/data/publication.js`.
+- Every article MUST have YAML frontmatter fields: `title`, `date` (YYYY-MM-DD), `category`, `description`. Never use `pubDate`; publication filtering reads `date`.
+- Allowed categories: `Novinky`, `Tipy do výuky`, `Ze zákulisí`.
+- A date in the future is allowed for scheduled publication; do not change it merely to pass checks.
+- File names determine article URLs; date prefixes are a convention, not a requirement. Avoid renaming existing files without a reason.
+- Use `templates/article.md.example` as a starting point, not as an article in the content directory.
+- Run `npm run check:posts` and `npm run build`. The build runs the validation automatically and fails on missing or malformed required metadata.
+- After committing, verify the Cloudflare deployment uses the expected commit and the generated route is present. Verify the public URL where possible. Never claim publication solely because a GitHub commit succeeded.
