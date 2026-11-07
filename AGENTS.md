@@ -35,6 +35,6 @@ Consult these guides before working on related tasks:
 ## Social sharing images
 
 - Optional social-only images go in `public/images/social/` and use exactly the article ID (Markdown filename without `.md`), e.g. `2026-11-07-ucite-ve-vice-tridach.webp`.
-- Supported extensions, in priority order: `.webp`, `.jpg`, `.png`. Prefer 1200 × 630 px.
+- Use JPEG (`.jpg`) as the default social preview format for broad compatibility; recommended dimensions: 1200 × 630 px. Existing `.webp` and `.png` images remain supported as fallbacks. When both JPG and WebP exist, JPG takes precedence.
 - Article pages automatically emit absolute `og:image` and `twitter:image` when a matching image exists at build time. No image is displayed in the article or article listing because of this feature.
 - If no image exists, omit image metadata. Verify generated HTML and the public preview after deployment; social networks may cache previous previews.
