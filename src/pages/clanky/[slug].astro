@@ -3,11 +3,14 @@ import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDate } from '../../data/posts.js';
 import { isPublished } from '../../data/publication.js';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.filter(post => isPublished(post)).map(post => ({ params: { slug: post.id }, props: { post } }));
 }
 const { post } = Astro.props;
+const socialImage = ['webp', 'jpg', 'png'].map(ext => `/images/social/${post.id}.${ext}`).find(path => existsSync(join(process.cwd(), 'public', path.slice(1))));
 const { Content } = await render(post);
 ---
-<Base title={post.data.title+' | Blog Živé tabule'} description={post.data.description}><div class="wrap article"><div class="meta">{post.data.category} · {formatDate(post.data.date)}</div><h1 style="margin-top:16px">{post.data.title}</h1><p class="lead">{post.data.description}</p>{post.data.image && <img class="article-image" src={post.data.image} alt={post.data.title} />}<div class="article-body" style="margin-top:42px"><Content /></div><a class="back" href="/">← Všechny články</a></div></Base>
+<Base title={post.data.title+' | Blog Živé tabule'} description={post.data.description} socialImage={socialImage}><div class="wrap article"><div class="meta">{post.data.category} · {formatDate(post.data.date)}</div><h1 style="margin-top:16px">{post.data.title}</h1><p class="lead">{post.data.description}</p>{post.data.image && <img class="article-image" src={post.data.image} alt={post.data.title} />}<div class="article-body" style="margin-top:42px"><Content /></div><a class="back" href="/">← Všechny články</a></div></Base>
