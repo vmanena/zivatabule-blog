@@ -8,6 +8,10 @@ Učíte v několika třídách a pro každou potřebujete něco trochu jiného? 
 
 [Živá tabule](https://zivatabule.cz) umožňuje uložit si celý stav tabule do souboru a později ho znovu načíst. **Nově můžete soubor ještě před uložením sami pojmenovat.** Díky tomu se v uložených tabulích snadno vyznáte.
 
+## Kde uložení a obnovení najdete?
+
+Na **úvodní stránce Živé tabule** klikněte **vpravo nahoře na ozubené kolečko**. V otevřené nabídce najdete možnosti **Uložit tabuli do souboru** a **Načíst tabuli ze souboru**. Právě tady si můžete tabuli pojmenovat, uložit a později zase obnovit.
+
 ## Jedna třída, jedna uložená tabule
 
 Představte si, že učíte v 6. B. Připravíte si seznam žáků pro losování, nastavíte si skupiny a doplníte poznámky, které budete při výuce potřebovat. Pak zvolíte **Uložit tabuli do souboru**, zadáte třeba název **6. B** a soubor uložíte.
