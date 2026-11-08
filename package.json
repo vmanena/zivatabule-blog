@@ -7,10 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run check:posts && astro build",
+    "build": "npm run check:posts && astro build && npm run check:social",
     "preview": "astro preview",
     "astro": "astro",
-    "check:posts": "node scripts/validate-posts.mjs"
+    "check:posts": "node scripts/validate-posts.mjs",
+    "check:social": "node scripts/validate-social-images.mjs"
   },
   "dependencies": {
     "astro": "^7.4.4"
