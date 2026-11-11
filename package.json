@@ -14,6 +14,6 @@
     "check:social": "node scripts/validate-social-images.mjs"
   },
   "dependencies": {
-    "astro": "^7.4.4"
+    "astro": "^7.4.7"
   }
 }
