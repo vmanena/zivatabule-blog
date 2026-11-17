@@ -1,10 +1,10 @@
 ---
-title: "Vaše soukromí bereme vážně"
+title: Vaše soukromí bereme vážně
 date: 2026-11-15
-category: "Ze zákulisí"
-description: "Proč Živá tabule funguje bez registrace, jak přistupujeme k údajům uživatelů a proč jsme připravili samostatnou stránku o soukromí."
+category: Ze zákulisí
+description: Proč Živá tabule funguje bez registrace, jak přistupujeme k údajům
+  uživatelů a proč jsme připravili samostatnou stránku o soukromí.
 ---
-
 Když ve třídě potřebujete spustit časovač, rozdělit žáky do skupin nebo připravit rychlé hlasování, nechceme po vás, abyste si nejdřív zakládali účet. A už vůbec nepotřebujeme znát jména všech žáků, kteří se do společných aktivit zapojují.
 
 **Živou tabuli vyvíjíme tak, abychom o jejích uživatelích nemuseli vědět víc, než je pro fungování jednotlivých nástrojů potřeba.**
@@ -75,7 +75,7 @@ Stejně jako samotnou Živou tabuli budeme také stránku o soukromí průběžn
 
 Možná vás zajímá něco, co nás při psaní nenapadlo. Možná byste některé informace uvítali podrobněji. Nebo máte zkušenost či připomínku, která nám pomůže text zpřesnit.
 
-Napsat nám můžete na [vaclav@manena.info](mailto:vaclav@manena.info). Vašimi podněty se budeme zabývat a tam, kde to bude potřeba, informace doplníme nebo upřesníme.
+Napsat nám můžete na [manena@zivatabule.cz](mailto:manena@zivatabule.cz). Vašimi podněty se budeme zabývat a tam, kde to bude potřeba, informace doplníme nebo upřesníme.
 
 Živou tabuli vyvíjíme postupně a vaše zpětná vazba nám pomáhá rozhodovat, co zlepšit. U informací o soukromí to nechceme dělat jinak.
 
