@@ -1,10 +1,10 @@
 ---
 title: "Vzájemné hodnocení: zpětná vazba od spolužáků"
 date: 2026-11-18
-category: "Novinky"
-description: "Nový nástroj pomáhá žákům dávat si anonymní, konkrétní zpětnou vazbu podle předem domluvených kritérií."
+category: Tipy do výuky
+description: Nový nástroj pomáhá žákům dávat si anonymní, konkrétní zpětnou
+  vazbu podle předem domluvených kritérií.
 ---
-
 ## Zpětná vazba, se kterou se dá pracovat
 
 Při vzájemném hodnocení žáci neposuzují spolužáky podle neurčitého dojmu. Zaměřují se na **konkrétní kritéria**, která připraví učitel. Nový nástroj Vzájemné hodnocení vznikl na základě podnětu **Petra V. — děkujeme za nápad, který pomáhá převést vrstevnickou zpětnou vazbu do přehledné a praktické podoby.**
