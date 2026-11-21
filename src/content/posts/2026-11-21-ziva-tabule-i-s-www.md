@@ -2,10 +2,10 @@
 title: Živá tabule už funguje i s www
 date: 2026-11-21
 category: Novinky
-description: Živou tabuli i její mezinárodní verzi ZiwaBoard teď otevřete i z adresy začínající na www.
+description: Živou tabuli i její mezinárodní verzi ZiwaBoard teď otevřete i z
+  adresy začínající na www.
 ---
-
-Patříte mezi lidi, kteří před adresu webu automaticky napíšou `www`? Teď už kvůli Živé tabuli nemusíte sahat po Backspace. 🙂
+Patříte mezi lidi, kteří před adresu webu automaticky napíšou `www`? Odteď už se na Živou tabuli dostanete i bez vyhledávače. 🙂
 
 Živou tabuli otevřete i na [www.zivatabule.cz](https://www.zivatabule.cz) a její mezinárodní verzi na [www.ziwaboard.com](https://www.ziwaboard.com). Fungují i kratší adresy bez `www`, takže klidně pište tak, jak jste zvyklí.
 
